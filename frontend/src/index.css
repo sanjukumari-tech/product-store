@@ -1,0 +1,73 @@
+/* ProductCard.css */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 16px;
+  padding: 16px;
+  max-width: 300px;
+  text-align: center;
+  background-color: #f9f9f9; /* Light background color */
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  justify-content: center;
+
+  
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #e1e1e1; /* Light border under image */
+}
+
+.product-card h3 {
+  margin: 16px 0 8px;
+  font-size: 1.2em;
+  color: #333; /* Dark text color */
+}
+
+.product-card p {
+  margin: 8px 0;
+  color: #555; /* Slightly lighter text color */
+}
+
+.product-card .price {
+  font-size: 1.2em;
+  color: #e74c3c; /* Bright red color for price */
+}
+
+/* Hover effects */
+.product-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.product-card:hover img {
+  border-color: #e74c3c; /* Change border color on hover */
+}
+
+
+/* ProductList.css */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px; /* Space between cards */
+  padding: 16px;
+  background-color: #f0f0f0; /* Light background for the list */
+  box-sizing: border-box; /* Ensure padding does not affect layout */
+}
+
+/* Media queries to handle responsiveness */
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust for small screens */
+  }
+}
